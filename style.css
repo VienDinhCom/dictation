@@ -1,0 +1,9 @@
+.download {
+    max-width: 300px;
+    margin: 30px auto 0 auto;
+    text-align: center;
+}
+
+.download .title {
+    font-size: 30px;
+}
