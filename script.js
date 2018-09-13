@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $.get("https://api.github.com/repos/maxvien/dictation/releases/latest", function(data, status){
-    if (status !== 'success') return location.reload();
+    if (status !== 'success') return;
 
     var assets = data.assets;
 
@@ -32,6 +32,8 @@ $(document).ready(function(){
     }
 
     var downloadList = $('.download .list-group');
+
+    downloadList.find('*').remove();
 
     if (is.mac()) {
       downloadList.append('<a href="' + forMac.link + '" class="list-group-item list-group-item-action active">' + forMac.text + '</a>');
